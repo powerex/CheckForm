@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parent" onMouseMoved="#updateSpeed" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"  >
+   <children>
+      <Canvas fx:id="test" height="1000" layoutX="34.0" layoutY="186.0" width="1000.0" />
+      <BorderPane layoutY="35.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <VBox alignment="CENTER" maxWidth="900.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="check" alignment="CENTER" contentDisplay="CENTER" maxWidth="1000.0" minWidth="500.0" mnemonicParsing="false" onAction="#check" prefHeight="50.0" text="Отримати код" textAlignment="CENTER" visible="false" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <BorderPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="50.0" left="50.0" right="50.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </bottom>
+         <center>
+            <VBox fx:id="mainVBox" alignment="CENTER" maxWidth="1000.0" minWidth="640.0" prefHeight="480.0" prefWidth="100.0" spacing="70.0" visible="true" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="big-yellow" fx:id="startButton" alignment="CENTER" mnemonicParsing="false" onAction="#start" prefHeight="200" prefWidth="450" text="Почати" visible="true" />
+                  <HBox fx:id="HBox1" alignment="CENTER" visible="false">
+                     <children>
+                        <!--<JFXToggleButton fx:id="tButton1" unToggleColor="#8c0700" unToggleLineColor="#d70b00" onAction="#check1" />-->
+                        <TextField fx:id="field1" alignment="CENTER" minHeight="50.0" promptText="Завдання 1" onAction="#check1">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="HBox2" alignment="CENTER" minHeight="65.0" visible="false">
+                     <children>
+                        <!--<JFXToggleButton fx:id="tButton2" minHeight="65.0" unToggleColor="#8c0700" unToggleLineColor="#d70b00" onAction="#check2" />-->
+                        <TextField fx:id="field2" alignment="CENTER" minHeight="50.0" promptText="Завдання 2" onAction="#check2">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="HBox3" alignment="CENTER" visible="false">
+                     <children>
+                        <!--<JFXToggleButton fx:id="tButton3" onAction="#check3" unToggleColor="#8c0700" unToggleLineColor="#d70b00" />-->
+                        <TextField fx:id="field3" alignment="CENTER" minHeight="50.0" promptText="Завдання 3" onAction="#check3">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="100.0" right="100.0" top="20.0" />
+               </padding>
+            </VBox>
+         </center>
+         <top>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="infoLabel" text="" />
+                  <Region HBox.hgrow="ALWAYS" />
+                   <Button id="exit" fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" maxWidth="100.0" minWidth="50.0" onAction="#exit" text="Вихід" textAlignment="CENTER" visible="false" BorderPane.alignment="CENTER" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
